@@ -1,0 +1,70 @@
+name: Bug report / Ошибка
+description: Something does not work as expected. / Что-то работает не так.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please fill in the fields below — in English or Russian.
+        Спасибо за сообщение! Заполните поля ниже — можно на русском.
+  - type: input
+    id: version
+    attributes:
+      label: Hubsafe version / Версия
+      description: Settings → About (bottom of the page). / Настройки → «О программе» внизу страницы.
+      placeholder: "0.2.0"
+    validations:
+      required: true
+  - type: input
+    id: ghub
+    attributes:
+      label: G HUB version / Версия G HUB
+      description: Shown on the Backups page next to the backup folder. / Видна на странице «Копии» рядом с папкой копий.
+      placeholder: "2026.6.981214"
+  - type: input
+    id: devices
+    attributes:
+      label: Devices / Устройства
+      description: Your Logitech mouse, keyboard, headset. / Ваши мышь, клавиатура, гарнитура Logitech.
+      placeholder: "G502 X Lightspeed, G915"
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows
+      options:
+        - Windows 11
+        - Windows 10
+        - Other / Другая
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where / Где
+      options:
+        - Backups / Копии
+        - Restore / Восстановление
+        - Button map / Карта кнопок
+        - Game history / История игры
+        - Share (.hubsafe file) / Обмен файлом
+        - Watcher / Сторож
+        - Settings, tray, other / Настройки, трей, другое
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened? / Что случилось?
+      description: What did you expect and what happened instead? / Что ожидали и что произошло на самом деле?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / Как повторить
+      placeholder: |
+        1. ...
+        2. ...
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Скриншоты
+      description: Drag images here, including the error message if there was one. / Перетащите картинки сюда, в том числе сообщение об ошибке, если оно было.
