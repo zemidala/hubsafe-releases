@@ -19,7 +19,8 @@ English and Russian interface · Русский интерфейс — [see belo
 - **Game history.** What changed in a game and when, with the old value crossed out. Return one game to any day; other games are not touched.
 - **Share a game.** Save a game's profile and macros to a `.hubsafe` file, with an optional button map picture inside. A double click opens it in Hubsafe on another PC: it shows what is inside and finds the game on the disks before writing anything.
 - **Watcher.** G HUB sometimes loses settings after sleep or an update. Every 5 minutes Hubsafe compares G HUB with the last backup (read only) and, if profiles or macros disappeared, a notification offers to put them back.
-- Dark and light themes, tray icon, start with Windows, update check.
+- **Updates itself.** When a new version is out, Settings → About shows **Update to X**: Hubsafe downloads it, checks it against the release checksums, replaces itself and restarts. Settings and autostart stay.
+- Dark and light themes, tray icon, start with Windows.
 
 | Button map | Game history |
 |---|---|
@@ -34,7 +35,7 @@ English and Russian interface · Русский интерфейс — [see belo
 1. Download `Hubsafe-<version>-win-x64.zip` from [Releases](https://github.com/zemidala/hubsafe-releases/releases/latest) and unzip it to any folder.
 2. Run `Hubsafe.exe`. The app is not code-signed yet, so Windows SmartScreen may warn you: click **More info → Run anyway**.
 3. On the first start, choose where to keep backups (a NAS share or any folder) and press **Check access**.
-4. To update, exit Hubsafe from the tray and replace `Hubsafe.exe` with the new one (the bare exe is attached to every release too). Settings and backups stay.
+4. To update, press **Update to X** in Settings → About (version 0.3.0 and later). Older versions: exit Hubsafe from the tray and replace `Hubsafe.exe` with the new one (the bare exe is attached to every release). Settings and backups stay either way.
 5. Settings are in `%APPDATA%\Hubsafe`, undo copies in `%LOCALAPPDATA%\Hubsafe`. To uninstall, delete the exe and those two folders; your backups stay where you put them.
 
 Hubsafe reads G HUB's settings from `%LOCALAPPDATA%\LGHUB` and writes them only when you restore. Nothing is sent anywhere except the update check on GitHub.
@@ -70,12 +71,13 @@ Hubsafe is not made by or affiliated with Logitech. Logitech, Logitech G and G H
 - история игры: что и когда менялось, старое значение зачёркнуто; одну игру можно вернуть к любому дню;
 - обмен игрой через файл `.hubsafe`: профиль, макросы и по желанию картинка с кнопками, на другом ПК открывается двойным щелчком;
 - сторож: если G HUB потерял профили или макросы (после сна, обновления), уведомление предложит их вернуть;
-- тёмная и светлая темы, значок в трее, автозапуск, проверка обновлений.
+- обновляется сама: когда выходит новая версия, в «Настройки → О программе» появляется кнопка «Обновить до X», Hubsafe скачивает версию, сверяет контрольные суммы, заменяет себя и перезапускается;
+- тёмная и светлая темы, значок в трее, автозапуск.
 
 Установка: скачайте архив `Hubsafe-<версия>-win-x64.zip`, распакуйте в любую папку и запустите `Hubsafe.exe`. Программа пока
 не подписана цифровой подписью, поэтому Windows SmartScreen может показать предупреждение: нажмите **Подробнее → Выполнить в любом случае**.
 При первом запуске выберите, где хранить копии, и нажмите «Проверить доступ».
-Обновление: выйдите из Hubsafe через трей и замените `Hubsafe.exe` новым, настройки и копии сохранятся. Архивы *Source code* в релизе
+Обновление: кнопка «Обновить до X» в «Настройки → О программе» (с версии 0.3.0). В более старых версиях выйдите из Hubsafe через трей и замените `Hubsafe.exe` новым. Настройки и копии сохранятся в обоих случаях. Архивы *Source code* в релизе
 GitHub добавляет сам, программы в них нет.
 
 Нашли ошибку — [создайте issue](https://github.com/zemidala/hubsafe-releases/issues/new/choose); вопросы и идеи — в [Discussions](https://github.com/zemidala/hubsafe-releases/discussions).
